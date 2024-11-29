@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:wght@300;400;500;600&family=Mulish:wght@300&family=Playfair+Display:wght@700&family=Quicksand:wght@300;400;500;600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Bricolage Grotesque", sans-serif;
+  text-decoration: none;
+  transition: all 0.5s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+  overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 26px;
+}
+.header > h1 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.backgound {
+  display: flex;
+  position: relative;
+  justify-content: end;
+}
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 36%, rgba(0, 0, 0, 0) 100%), url("/assets/images/image.png");
+  padding-left: 240px;
+  padding-top: 156px;
+  text-transform: uppercase;
+}
+.banner-content {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 300;
+}
+.banner-title {
+  color: #ffffff;
+  font-size: 64px;
+  font-weight: 700;
+}
+.banner-subtitle {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 200;
+}
+
+.picture {
+  position: absolute;
+  padding-top: 184px;
+  padding-right: 240px;
+}
+
+.content {
+  margin-top: 80px;
+  position: relative;
+}
+.content-text {
+  position: absolute;
+  z-index: -1;
+  color: rgba(20, 31, 82, 0.1);
+  font-family: "Bricolage Grotesque";
+  font-size: 74px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: -78px;
+}
+.content-title {
+  position: absolute;
+  z-index: 1;
+  margin-top: -34px;
+  color: #000;
+  font-family: "Bricolage Grotesque";
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 40px; /* 125% */
+}
+.content-subtext {
+  color: #000;
+  font-family: "Bricolage Grotesque";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px; /* 133.333% */
+}
+
+.body {
+  width: 710px;
+  margin-left: 240px;
+  margin-top: 146px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.boder {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  border-top: 1px solid #d9d9d9;
+  border-bottom: 1px solid #d9d9d9;
+}
+.boder-content {
+  display: flex;
+  width: 400px;
+  padding: 16px 12px;
+  gap: 8px;
+  align-self: stretch;
+}
+.boder-content > img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+.boder-content__title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.boder-content__title > h3 {
+  color: #000;
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+}
+.boder-content__title > p {
+  align-self: stretch;
+  color: #666;
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+.button {
+  display: flex;
+  gap: 8px;
+  margin-top: 40px;
+}
+.button-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  padding: 6px 20px;
+  gap: 10px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.5 ease-in-out;
+  position: relative;
+  background-color: #000;
+}
+.button-content__text {
+  color: #fff;
+  text-align: center;
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.button-content__logo {
+  width: 24px;
+  height: 24px;
+}
+.button-content2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  padding: 6px 20px;
+  gap: 10px;
+  cursor: pointer;
+  border: 2px solid #000;
+}
+.button-content2__text {
+  color: #000;
+  text-align: center;
+  font-family: "Bricolage Grotesque";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+.button-content2__logo {
+  width: 24px;
+  height: 24px;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
