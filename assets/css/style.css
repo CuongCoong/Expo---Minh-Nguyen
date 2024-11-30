@@ -207,7 +207,7 @@ html {
 }
 
 .slider {
-  background-image: url("./assets/images/slider.png");
+  background-image: url("/assets/images/slider.png");
   margin-top: 100px;
   padding: 100px 240px;
 }
@@ -605,7 +605,8 @@ html {
   .picture {
     position: absolute;
     left: 24px;
-    width: 614px;
+    width: 375px;
+    padding-right: 0;
   }
   .content {
     position: relative;
@@ -647,7 +648,7 @@ html {
   }
   .body {
     margin: 210px 24px 50px;
-    width: 100%;
+    width: 375px;
   }
   .button {
     display: flex;
@@ -708,7 +709,7 @@ html {
     color: #000;
   }
   .slider {
-    background-image: url("assets/images/slider.png");
+    background-image: url("/assets/images/slider.png");
     padding: 24px;
     margin: 0;
   }
@@ -786,11 +787,10 @@ html {
   .offers-data__box {
     height: 174px;
     display: flex;
-    padding: 20px 40px;
+    padding: 20px 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
     border: 1px solid #d9d9d9;
   }
   .offers-data__box > h1 {
@@ -919,7 +919,7 @@ html {
     justify-content: center;
     gap: 50px;
     margin-top: 40px;
-    width: 596px;
+    width: 375px;
   }
   .footer-list__content {
     display: flex;
