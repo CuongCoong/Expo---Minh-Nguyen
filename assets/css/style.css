@@ -207,7 +207,7 @@ html {
 }
 
 .slider {
-  background-image: url("/assets/images/slider.png");
+  background-image: url("./assets/images/slider.png");
   margin-top: 100px;
   padding: 100px 240px;
 }
@@ -576,7 +576,7 @@ html {
   line-height: 20px; /* 142.857% */
 }
 
-@media screen and (max-width: 0px) {
+@media screen and (max-width: 500px) {
   .banner {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 36%, rgba(0, 0, 0, 0) 100%), url("/assets/images/image.png");
     padding: 0;
