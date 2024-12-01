@@ -5,7 +5,6 @@
 		position: absolute;
 		z-index: -1;
 		color: rgba(20, 31, 82, 0.1);
-		font-family: 'Bricolage Grotesque';
 		font-size: 74px;
 		font-weight: 800;
 		text-transform: uppercase;
@@ -16,7 +15,6 @@
 		z-index: 1;
 		margin-top: -38px;
 		color: #000;
-		font-family: 'Bricolage Grotesque';
 		font-size: 32px;
 		font-weight: 600;
 		line-height: 40px; /* 125% */
@@ -72,7 +70,6 @@
 			& > p {
 				align-self: stretch;
 				color: #666;
-				font-family: 'Bricolage Grotesque';
 				font-size: 14px;
 				font-style: normal;
 				font-weight: 400;
@@ -135,7 +132,7 @@
 	}
 }
 .slider {
-	background-image: url('/assets/images/slider.png');
+	background-image: url('../images/slider.png');
 	margin-top: 100px;
 	padding: 100px 240px;
 	&-content {
@@ -310,7 +307,7 @@
 	width: 100%;
 	padding: 80px 240px;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 36%, rgba(0, 0, 0, 0) 100%),
-		url('/assets/images/background.png');
+		url('../images/background.png');
 	flex-shrink: 0;
 	height: 680px;
 	display: grid;
