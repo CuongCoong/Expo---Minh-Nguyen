@@ -159,51 +159,49 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
   height: 44px;
   padding: 6px 20px;
   gap: 10px;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.5 ease-in-out;
   position: relative;
-  background-color: #000;
+  overflow: hidden;
+  border: 1px solid #d9d9d9;
+  transition: all 250ms;
+  cursor: pointer;
+  color: #000000;
 }
 .button-content__text {
-  color: #fff;
   text-align: center;
-  font-family: "Bricolage Grotesque";
   font-size: 14px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 142.857% */
+  position: relative;
+  z-index: 10;
 }
 .button-content__logo {
   width: 24px;
   height: 24px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
 }
-.button-content2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 44px;
-  padding: 6px 20px;
-  gap: 10px;
-  cursor: pointer;
-  border: 1px solid #d9d9d9;
+.button-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #000;
+  z-index: 1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
 }
-.button-content2__text {
-  color: #000;
-  text-align: center;
-  font-family: "Bricolage Grotesque";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 142.857% */
+.button-content:hover {
+  color: #ffffff;
 }
-.button-content2__logo {
-  width: 24px;
-  height: 24px;
-  color: #000;
+.button-content:hover::before {
+  width: 100%;
 }
 
 .slider {
@@ -234,10 +232,21 @@ html {
   line-height: 24px; /* 133.333% */
   width: 100%;
 }
-.slider-img {
+
+.carousel {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  gap: 8px;
+}
+.carousel > img {
+  object-fit: cover;
+}
+.carousel > img:first-child {
+  margin-left: 0;
 }
 
 .offers {
@@ -273,12 +282,12 @@ html {
   gap: 12px;
 }
 .offers-items__box {
+  cursor: pointer;
   display: flex;
   padding: 20px 40px;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  flex: 1 0 0;
   align-self: stretch;
   border: 1px solid #d9d9d9;
 }
@@ -292,6 +301,9 @@ html {
   line-height: 28px; /* 140% */
   align-self: stretch;
 }
+.offers-items__box:hover {
+  transform: scale(1.05);
+}
 .offers-data {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -299,6 +311,7 @@ html {
   margin-top: 40px;
 }
 .offers-data__box {
+  cursor: pointer;
   display: flex;
   padding: 20px 40px;
   flex-direction: column;
@@ -321,6 +334,9 @@ html {
   font-weight: 400;
   line-height: 20px; /* 142.857% */
   text-transform: uppercase;
+}
+.offers-data__box:hover {
+  transform: scale(1.05);
 }
 
 .conclusion {
@@ -657,31 +673,52 @@ html {
     width: 375px;
   }
   .button-content {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    outline: none;
     height: 44px;
-    padding: 6px 12px;
+    padding: 6px 10px;
     gap: 10px;
-    color: #ffffff;
-    cursor: pointer;
-    transition: all 0.5 ease-in-out;
     position: relative;
-    background-color: #000;
+    overflow: hidden;
+    border: 1px solid #d9d9d9;
+    transition: all 250ms;
+    cursor: pointer;
+    color: #000000;
   }
   .button-content__text {
-    color: #fff;
     text-align: center;
-    font-family: "Bricolage Grotesque";
-    font-size: 12px;
-    font-style: normal;
+    font-size: 14px;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
+    position: relative;
+    z-index: 10;
   }
   .button-content__logo {
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    z-index: 10;
+    transition: color 0.4s;
+  }
+  .button-content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #000;
+    z-index: 1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 250ms;
+  }
+  .button-content:hover {
+    color: #ffffff;
+  }
+  .button-content:hover::before {
+    width: 100%;
   }
   .button-content2 {
     width: 100%;
@@ -719,13 +756,6 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  .slider-img {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-    overflow: hidden;
   }
   .offers {
     padding: 100px 24px;
@@ -778,6 +808,9 @@ html {
     line-height: 28px; /* 140% */
     align-self: stretch;
   }
+  .offers-items__box:hover {
+    transform: scale(1.03);
+  }
   .offers-data {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -806,6 +839,9 @@ html {
     font-weight: 400;
     line-height: 20px; /* 142.857% */
     text-transform: uppercase;
+  }
+  .offers-data__box:hover {
+    transform: scale(1.03);
   }
   .conclusion {
     display: grid;
@@ -926,6 +962,16 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 4px;
+  }
+  .carousel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+    overflow: hidden;
+  }
+  .carousel > img {
+    width: 100%;
   }
 }
 

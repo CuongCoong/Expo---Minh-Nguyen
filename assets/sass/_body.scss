@@ -89,50 +89,48 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		outline: none;
 		height: 44px;
 		padding: 6px 20px;
 		gap: 10px;
-		color: $textColor;
-		cursor: pointer;
-		transition: all 0.5 ease-in-out;
 		position: relative;
-		background-color: #000;
-		&__text {
-			color: #fff;
-			text-align: center;
-			font-family: 'Bricolage Grotesque';
-			font-size: 14px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 20px; /* 142.857% */
-		}
-		&__logo {
-			width: 24px;
-			height: 24px;
-		}
-	}
-	&-content2 {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 44px;
-		padding: 6px 20px;
-		gap: 10px;
-		cursor: pointer;
+		overflow: hidden;
 		border: 1px solid #d9d9d9;
+		transition: all 250ms;
+		cursor: pointer;
+		color: $buttonColor;
 		&__text {
-			color: #000;
 			text-align: center;
-			font-family: 'Bricolage Grotesque';
 			font-size: 14px;
-			font-style: normal;
 			font-weight: 400;
-			line-height: 20px; /* 142.857% */
+			position: relative;
+			z-index: 10;
 		}
 		&__logo {
 			width: 24px;
 			height: 24px;
-			color: #000;
+			position: relative;
+			z-index: 10;
+			transition: color 0.4s;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 0;
+			background-color: #000;
+			z-index: 1;
+			-webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+			box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+			transition: all 250ms;
+		}
+		&:hover {
+			color: $textColor;
+		}
+		&:hover::before {
+			width: 100%;
 		}
 	}
 }
@@ -163,10 +161,20 @@
 			width: 100%;
 		}
 	}
-	&-img {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+}
+.carousel {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	gap: 8px;
+	& > img {
+		object-fit: cover;
+		&:first-child {
+			margin-left: 0;
+		}
 	}
 }
 .offers {
@@ -200,12 +208,12 @@
 		margin-top: 40px;
 		gap: 12px;
 		&__box {
+			cursor: pointer;
 			display: flex;
 			padding: 20px 40px;
 			flex-direction: column;
 			align-items: center;
 			gap: 16px;
-			flex: 1 0 0;
 			align-self: stretch;
 			border: 1px solid #d9d9d9;
 			& > h3 {
@@ -218,6 +226,9 @@
 				line-height: 28px; /* 140% */
 				align-self: stretch;
 			}
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 	}
 	&-data {
@@ -226,6 +237,7 @@
 		gap: 12px;
 		margin-top: 40px;
 		&__box {
+			cursor: pointer;
 			display: flex;
 			padding: 20px 40px;
 			flex-direction: column;
@@ -247,6 +259,9 @@
 				font-weight: 400;
 				line-height: 20px; /* 142.857% */
 				text-transform: uppercase;
+			}
+			&:hover {
+				transform: scale(1.05);
 			}
 		}
 	}

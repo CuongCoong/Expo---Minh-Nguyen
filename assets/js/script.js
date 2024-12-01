@@ -1,17 +1,25 @@
-let currentIndex = 0;
-const slider = document.getElementById('slider');
-const totalSlides = slider.children.length;
+const carousel = document.querySelector('.carousel');
+let isDragStart = false,
+	prevPageX,
+	prevScrollLeft;
 
-function updateSlider() {
-	slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+const dragStart = (e) => {
+	isDragStart = true;
+	prevPageX = e.pageX;
+	prevScrollLeft = carousel.scrollLeft;
+};
 
-function nextSlide() {
-	currentIndex = (currentIndex + 1) % totalSlides;
-	updateSlider();
-}
+const dragging = (e) => {
+	if (!isDragStart) return;
+	e.preventDefault();
+	let positionDiff = e.pageX - prevPageX;
+	carousel.scrollLeft = prevScrollLeft - positionDiff;
+};
 
-function prevSlide() {
-	currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-	updateSlider();
-}
+const dragStop = () => {
+	isDragStart = false;
+};
+
+carousel.addEventListener('mousedown', dragStart);
+carousel.addEventListener('mousemove', dragging);
+carousel.addEventListener('mouseup', dragStop);
