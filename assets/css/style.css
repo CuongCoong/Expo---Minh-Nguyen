@@ -591,7 +591,7 @@ html {
 
 @media screen and (max-width: 500px) {
   .banner {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 36%, rgba(0, 0, 0, 0) 100%), url("/assets/images/image.png");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 36%, rgba(0, 0, 0, 0) 100%), url("../images/image.png");
     padding: 0;
     text-transform: uppercase;
     object-fit: cover;
@@ -743,7 +743,7 @@ html {
     color: #000;
   }
   .slider {
-    background-image: url("/assets/images/slider.png");
+    background-image: url("../images/slider.png");
     padding: 24px;
     margin: 0;
   }
@@ -849,7 +849,7 @@ html {
   .form {
     width: 100%;
     padding: 20px 24px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 36%, rgba(0, 0, 0, 0) 100%), url("/assets/images/background.png");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 36%, rgba(0, 0, 0, 0) 100%), url("../images/background.png");
     overflow: hidden;
     object-fit: cover;
     flex-shrink: 0;
