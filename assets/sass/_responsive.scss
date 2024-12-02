@@ -19,9 +19,9 @@
 		}
 	}
 	.picture {
-		width: 800px;
+		width: 848px;
 		position: absolute;
-		left: 780px;
+		left: 730px;
 	}
 	.content {
 		position: relative;
@@ -30,24 +30,24 @@
 			z-index: -1;
 			color: rgba(20, 31, 82, 0.1);
 			font-family: 'Bricolage Grotesque';
-			font-size: 52px;
+			font-size: 60px;
 			font-weight: 800;
 			text-transform: uppercase;
 		}
 		&-title {
 			position: absolute;
 			z-index: 1;
-			top: -20px;
+			top: -14px;
 			color: #000;
 			font-family: 'Bricolage Grotesque';
-			font-size: 24px;
+			font-size: 30px;
 			font-weight: 600;
 		}
 		&-subtext {
 			width: 580px;
 			color: #000;
 			font-family: 'Bricolage Grotesque';
-			font-size: 12px;
+			font-size: 18px;
 			font-style: normal;
 			font-weight: 300;
 			line-height: 24px; /* 133.333% */
@@ -55,7 +55,7 @@
 	}
 	.body {
 		margin: 100px 120px;
-		width: 670px;
+		width: 600px;
 	}
 	.boder {
 		display: grid;
