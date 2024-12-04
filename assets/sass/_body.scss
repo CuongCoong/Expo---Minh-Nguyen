@@ -278,13 +278,8 @@
 			line-height: normal;
 			text-transform: uppercase;
 		}
-		& > h1 {
-			color: #000;
-			font-family: 'Bricolage Grotesque';
-			font-size: 32px;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 40px;
+		& > img {
+			margin-top: 32px;
 		}
 	}
 	&-right {
@@ -307,7 +302,7 @@
 	padding: 80px 240px;
 	background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 36%, rgba(0, 0, 0, 0) 100%),
 		url('../images/background.png');
-	flex-shrink: 0;
+	object-fit: cover;
 	height: 680px;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -422,4 +417,7 @@
 	background: #000;
 	width: 170px;
 	color: #fff;
+}
+.logo {
+	width: 200px;
 }

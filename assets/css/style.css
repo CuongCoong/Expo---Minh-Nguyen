@@ -20,7 +20,7 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 26px;
+  background: #0c0821;
 }
 .header > h1 {
   text-align: center;
@@ -354,13 +354,8 @@ html {
   line-height: normal;
   text-transform: uppercase;
 }
-.conclusion-left > h1 {
-  color: #000;
-  font-family: "Bricolage Grotesque";
-  font-size: 32px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 40px;
+.conclusion-left > img {
+  margin-top: 32px;
 }
 .conclusion-right {
   display: flex;
@@ -381,7 +376,7 @@ html {
   width: 100%;
   padding: 80px 240px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 36%, rgba(0, 0, 0, 0) 100%), url("../images/background.png");
-  flex-shrink: 0;
+  object-fit: cover;
   height: 680px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -500,6 +495,10 @@ html {
   color: #fff;
 }
 
+.logo {
+  width: 200px;
+}
+
 .footer {
   display: flex;
   padding: 0px 240px;
@@ -609,9 +608,8 @@ html {
     font-weight: 200;
   }
   .picture {
-    width: 848px;
     position: absolute;
-    left: 730px;
+    padding-right: 120px;
   }
   .content {
     position: relative;
