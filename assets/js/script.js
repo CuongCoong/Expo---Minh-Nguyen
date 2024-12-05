@@ -23,13 +23,3 @@ const dragStop = () => {
 carousel.addEventListener('mousedown', dragStart);
 carousel.addEventListener('mousemove', dragging);
 carousel.addEventListener('mouseup', dragStop);
-document.getElementById('emailButton').addEventListener('click', function () {
-	// Tạo liên kết email
-	const email = 'joseph@newzealandbrands.co.nz'; // Địa chỉ email
-	const subject = 'Tiêu đề email'; // Tiêu đề email
-	const body = 'Nội dung email'; // Nội dung email
-	const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-	// Điều hướng đến liên kết mailto
-	window.location.href = mailtoLink;
-});
